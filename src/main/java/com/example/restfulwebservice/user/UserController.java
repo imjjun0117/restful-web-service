@@ -77,4 +77,5 @@ public class UserController {
             throw new UserNotFoundException(String.format("ID[%s] not found", user.getId()));
         }//end if
     }//modifyUser
+
 }//class

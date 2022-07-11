@@ -5,6 +5,12 @@ logging:
   level:
     org.springframework: DEBUG
 spring:
+    jpa:
+      show-sql: true
+      hibernate:
+        ddl-auto: update
+      generate-ddl: true
+      defer-datasource-initialization: true
     messages:
       basename: messages
     mvc:
@@ -14,6 +20,13 @@ spring:
       user:
         name: username
         password: passw0rd
+    datasource:
+      url: jdbc:h2:mem:testdb
+      jpa:
+        show-sql: true
+      h2:
+        console:
+          enabled: true
 management:
   endpoints:
     web:
